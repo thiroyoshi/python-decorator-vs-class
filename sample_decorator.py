@@ -3,8 +3,8 @@
 import time
 
 
-def decoratedHander(controller):
-    def handler(event, num_loop):
+def sample_decorator(controller):
+    def handler(num_loop=10000):
         query_strings = 'Query'
         body = 'Body'
         path_params = 'Path'

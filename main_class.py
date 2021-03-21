@@ -11,5 +11,5 @@ class ImplementedClass(SampleClass):
 
 if __name__ == '__main__':
     sc = ImplementedClass()
-    result = sc.handler(10000)
+    result = sc.handler()
     print(result)

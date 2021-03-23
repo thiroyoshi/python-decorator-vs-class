@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import time
 from sample_class import SampleClass
 
 
@@ -10,6 +11,12 @@ class ImplementedClass(SampleClass):
 
 
 if __name__ == '__main__':
+    start = time.perf_counter()
+
     sc = ImplementedClass()
     result = sc.handler()
     print(result)
+
+    elapsed_time = time.perf_counter() - start
+
+    print('elapsed_time: %f [sec]' % elapsed_time)

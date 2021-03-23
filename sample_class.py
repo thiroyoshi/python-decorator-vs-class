@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import time
-
 
 class SampleClass(object):
 
@@ -16,13 +14,7 @@ class SampleClass(object):
         body = 'Body'
         path_params = 'Path'
 
-        start = time.perf_counter()
-
         for i in range(0, num_loop + 1):
             self.controller(query_strings, body, path_params)
-
-        elapsed_time = time.perf_counter() - start
-
-        print('elapsed_time: %f [msec]' % elapsed_time)
 
         return True
